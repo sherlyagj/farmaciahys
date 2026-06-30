@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Farmacia H y S</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#eef7ff;
+}
+
+header{
+background:#0059c7;
+padding:20px;
+position:sticky;
+top:0;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+color:white;
+font-size:32px;
+font-weight:bold;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:18px;
+}
+
+.hero{
+
+height:500px;
+
+background:
+linear-gradient(
+rgba(0,70,150,.5),
+rgba(0,70,150,.5)),
+
+url("https://images.unsplash.com/photo-1587854692152-cbe660dbde88");
+
+background-size:cover;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+color:white;
+
+text-align:center;
+
+}
+
+.hero h1{
+font-size:70px;
+}
+
+.hero p{
+font-size:22px;
+}
+
+.boton{
+
+margin-top:25px;
+
+background:white;
+
+padding:15px 30px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+color:#0059c7;
+
+font-weight:bold;
+
+}
+
+section{
+padding:70px 10%;
+}
+
+.titulo{
+color:#0059c7;
+margin-bottom:30px;
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.card img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+}
+
+.info{
+padding:15px;
+}
+
+.precio{
+color:#0059c7;
+font-size:22px;
+font-weight:bold;
+}
+
+.consulta{
+
+background:#0059c7;
+
+color:white;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+.consulta h1{
+font-size:70px;
+}
+
+.contacto{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 0 15px rgba(0,0,0,.15);
+
+line-height:2;
+
+}
+
+footer{
+
+background:#00386e;
+
+color:white;
+
+padding:25px;
+
+text-align:center;
+
+}
+
+.llamar{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#25d366;
+
+color:white;
+
+padding:20px;
+
+border-radius:50%;
+
+text-decoration:none;
+
+font-size:25px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+💙 H y S
+</div>
+
+<div class="menu">
+
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#consultas">Consultas</a>
+<a href="#contacto">Contacto</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero" id="inicio">
+
+<h1>
+Farmacia H y S
+</h1>
+
+<p>
+Medicamentos • Atención • Confianza
+</p>
+
+<a href="#productos" class="boton">
+Ver catálogo
+</a>
+
+</section>
+
+
+
+<section id="productos">
+
+<h2 class="titulo">
+Nuestros Productos
+</h2>
+
+<div class="grid">
+
+<script>
+const meds=[
+["Paracetamol",45],["Ibuprofeno",60],["Omeprazol",75],["Amoxicilina",95],
+["Loratadina",55],["Diclofenaco",70],["Vitamina C",90],["Antigripal",85],
+["Suero Oral",35],["Alcohol",40],["Jarabe para Tos",80],["Aspirina",50],
+["Ketorolaco",95],["Ambroxol",89],["Electrolit",42],["Clorfenamina",65],
+["Naproxeno",74],["Melatonina",120],["Gel Antibacterial",38],["Sales de Rehidratación",30]
+];
+
+document.write(
+meds.map(m=>`
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae">
+<div class="info">
+<h3>${m[0]}</h3>
+<div class="precio">$${m[1]}</div>
+</div>
+</div>
+`).join("")
+)
+</script>
+
+</div>
+
+</section>
+
+
+
+
+<section class="consulta" id="consultas">
+
+<h2>
+Consultas Médicas
+</h2>
+
+<br>
+
+<h1>
+$100 MXN
+</h1>
+
+<br>
+
+<p>
+
+✔ Consulta general<br>
+✔ Toma de presión<br>
+✔ Atención rápida<br>
+✔ Orientación médica
+
+</p>
+
+</section>
+
+
+
+
+<section class="contacto" id="contacto">
+
+<h2 class="titulo">
+Contacto y Ubicación
+</h2>
+
+<p>
+
+📍 <b>Dirección:</b><br>
+
+8va avenida norte número 194<br>
+Colonia 5 de febrero<br>
+Código Postal 30710
+
+</p>
+
+<br>
+
+<p>
+
+☎ <b>Teléfono:</b><br>
+
+962 175 2845
+
+</p>
+
+<br>
+
+<p>
+
+🕒 <b>Horario:</b><br>
+
+Lunes a sábado<br>
+
+8:00 AM — 8:00 PM
+
+</p>
+
+</section>
+
+
+
+<a
+class="llamar"
+href="tel:9621752845">
+
+☎
+
+</a>
+
+
+
+<footer>
+
+Farmacia H y S · Tu salud es nuestra prioridad
+
+</footer>
+
+</body>
+
+</html>
